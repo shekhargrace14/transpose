@@ -1,0 +1,17 @@
+{
+    "title": "Amazing Grace",
+    "key": "C",
+    "lines": [
+      [
+        { "chord": "C", "lyrics": "Ama-" },
+        { "chord": "G", "lyrics": "zing" },
+        { "chord": "Am", "lyrics": "grace" }
+      ],
+      [
+        { "chord": "F", "lyrics": "How" },
+        { "chord": "C", "lyrics": "sweet" },
+        { "chord": "G", "lyrics": "the sound" }
+      ]
+    ]
+  }
+  

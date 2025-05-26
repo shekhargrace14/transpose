@@ -1,5 +1,4 @@
-
-  {
+{
     "title": "Amazing Grace",
     "key": "C",
     "lines": [
@@ -19,5 +18,5 @@
         { "chord": "D", "lyrics": "sound" }
       ]
     ]
-  
   }
+  

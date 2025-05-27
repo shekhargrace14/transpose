@@ -5,12 +5,12 @@
     "lines": [
       [
         { "chord": "D", "lyrics": "Amazing grace, how" },
-        { "chord": "C/D", "lyrics": "sweet the" },
+        { "chord": "C/ D", "lyrics": "sweet the" },
         { "chord": "D", "lyrics": "sound" }
       ],
       [
         { "chord": "D", "lyrics": "Amazing grace, how" },
-        { "chord": "C/D", "lyrics": "sweet the" },
+        { "chord": "C /D", "lyrics": "sweet the" },
         { "chord": "D", "lyrics": "sound" }
       ],
       [

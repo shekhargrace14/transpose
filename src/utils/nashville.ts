@@ -23,13 +23,20 @@ function getScale(key: string): string[] {
   return scale.slice(0, 7); // return 7-note scale
 }
 
-function normalizeChord(chord: string): [string, string] {
-  const match = chord.match(/^([A-G][#b]?)(.*)$/);
+function normalizeChord(chord: string): [string, string, string?] {
+
+    // Remove all spaces (around and inside slash chords)
+  const clean = chord.trim().replace(/\s+/g, '');
+
+  // Matches slash chords like C/D or Cmaj7/D#
+  const match = clean.match(/^([A-G][#b]?)(.*?)(?:\/([A-G][#b]?))?$/);
   if (!match) throw new Error("Invalid chord: " + chord);
-  return [match[1], match[2]]; // root, suffix
+  
+  const [, root, suffix, bass] = match;
+  return [root, suffix, bass]; // root, suffix, optional bass
 }
 
-function transposeChord(
+export function transposeChord(
   chords: string[],
   fromKey: string,
   toKey: string
@@ -38,13 +45,19 @@ function transposeChord(
   const toScale = getScale(toKey);
 
   return chords.map((chord) => {
-    const [root, suffix] = normalizeChord(chord);
-    const index = fromScale.indexOf(root);
-    if (index === -1) return chord; // not in scale, leave unchanged
+    const [root, suffix, bass] = normalizeChord(chord);
 
-    const transposedRoot = toScale[index];
-    return transposedRoot + suffix;
+    const rootIndex = fromScale.indexOf(root);
+    const transposedRoot = rootIndex !== -1 ? toScale[rootIndex] : root;
+
+    let transposedBass = bass;
+    if (bass) {
+      const bassIndex = fromScale.indexOf(bass);
+      transposedBass = bassIndex !== -1 ? toScale[bassIndex] : bass;
+    }
+
+    return transposedBass ? `${transposedRoot}${suffix}/${transposedBass}` : `${transposedRoot}${suffix}`;
   });
 }
 
-export { MAJOR_SCALE, getKeyByShift, transposeChord };
+export { MAJOR_SCALE, getKeyByShift};

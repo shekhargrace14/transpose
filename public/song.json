@@ -1,23 +1,110 @@
-
-  {
-    "title": "Amazing Grace",
-    "key": "C",
+[
+  {"id":1,
+    "title": "Praise the Lord",
+    "artist": "Chris Tomlin",
+    "album": "Never Lose Sight",
+    "key": "A",
+    "year": 2016,
+    "bpm": 70,
+    "capo": 0,
+    "timeSignature": "4/4",
     "lines": [
       [
-        { "chord": "D", "lyrics": "Amazing grace, how" },
-        { "chord": "C/ D", "lyrics": "sweet the" },
-        { "chord": "D", "lyrics": "sound" }
+        {
+          "chord": "A",
+          "lyrics": "Let everything"
+        },
+        {
+          "chord": "",
+          "lyrics": "That has breath"
+        },
+        {
+          "chord": "",
+          "lyrics": "Praise the Lord"
+        },
+        {
+          "chord": "",
+          "lyrics": "Praise the Lord"
+        }
       ],
       [
-        { "chord": "D", "lyrics": "Amazing grace, how" },
-        { "chord": "C /D", "lyrics": "sweet the" },
-        { "chord": "D", "lyrics": "sound" }
+        {
+          "chord": "",
+          "lyrics": "Verse 1"
+        }
       ],
       [
-        { "chord": "D", "lyrics": "Amazing grace, how" },
-        { "chord": "C/D", "lyrics": "sweet the" },
-        { "chord": "D", "lyrics": "sound" }
+        {
+          "chord": "A",
+          "lyrics": "I’ll"
+        },
+        {
+          "chord": "",
+          "lyrics": "praise in the valley"
+        },
+        {
+          "chord": "D",
+          "lyrics": "Praise on the"
+        },
+        {
+          "chord": "A",
+          "lyrics": "mountain"
+        },
+        {
+          "chord": "D",
+          "lyrics": "I’ll"
+        },
+        {
+          "chord": "E/G#",
+          "lyrics": "praise when I’m sure"
+        },
+        {
+          "chord": "D",
+          "lyrics": "Praise"
+        },
+        {
+          "chord": "A",
+          "lyrics": "when I’m doubting"
+        }
+      ],
+      [
+        {
+          "chord": "",
+          "lyrics": "Verse 1"
+        },
+        {
+          "chord": "A",
+          "lyrics": "I’ll"
+        },
+        {
+          "chord": "",
+          "lyrics": "raise when outnumbered"
+        },
+        {
+          "chord": "D",
+          "lyrics": "Praise When"
+        },
+        {
+          "chord": "A",
+          "lyrics": "surrounded"
+        },
+        {
+          "chord": "D",
+          "lyrics": "Cause"
+        },
+        {
+          "chord": "E/G#",
+          "lyrics": "praise when I’m sure"
+        },
+        {
+          "chord": "D",
+          "lyrics": "Praise"
+        },
+        {
+          "chord": "A",
+          "lyrics": "when I’m doubting"
+        }
       ]
     ]
-  
   }
+]

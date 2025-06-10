@@ -1,14 +1,30 @@
-import Table from "@/components/table";
+import Table from "@/components/ChordTable";
 import Image from "next/image";
+import { fetchSongs } from "./reactQuery/query";
+import { table } from "console";
+import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const songs = await fetchSongs();
+  console.log(songs[0].id, "page songs   id");
+
   return (
     <>
     <h1 className="text-3xl font-bold underline">
       Hello world!
 
     </h1>
-    <Table/>
+    {
+      songs.map((song) => (
+        <Link href={`/song/${song.id}`} key={song.id}>
+        <div key={song.id} className="p-4">
+          <h2 className="text-2xl font-semibold mb-4">{song.title}</h2>
+          <p>{song.key}</p>
+        </div>
+        </Link>
+      ))
+    }
+  
     </>
   );
 }
